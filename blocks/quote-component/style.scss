@@ -1,0 +1,78 @@
+$box-shadow: 0 0 26px -1px rgba(128,128,128,1);
+$box-shadow-hover: 0 0 26px -1px #222222;
+
+.wp-block-testimonials-extendedblock{
+	display: flex;
+	line-height: 1.2;
+	padding: 30px;
+	position: relative;
+	border-radius: 20px;
+	box-shadow: $box-shadow;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	transition: all .3s ease-in-out;
+	&:hover {
+		box-shadow: $box-shadow-hover;
+	}
+	.fa-quote-left{
+		font-size: 48px;
+		margin-bottom: 20px;
+	}
+	.image{
+		flex-basis: 20%;
+		img{
+			border-radius: 50%;
+		}
+	}
+	.info{
+		flex-basis: 80%;
+		margin-top: 20px;
+		h6{
+			font-size: 14px;
+			margin: 15px 0;
+			font-weight: normal;
+			&::before {
+				content: '—';
+				margin-right: 5px;
+			}
+		}
+		h3{
+			font-size: 1.2em;
+			margin-top: 0;
+
+		}
+		p{
+			line-height: 1.4;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		a{
+			font-size: 14px;
+			text-decoration: none;
+			margin-right: 40px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all .3s ease-in-out;
+			&:hover {
+				filter: contrast(400%);
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wp-block-testimonials-extendedblock {
+		background-color: #dcd7ca;
+		display: flex;
+		flex-direction: row;
+		text-align: left;
+	}
+	.info {
+		padding: 0 0 0 80px;
+	}
+}
